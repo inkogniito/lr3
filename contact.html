@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="contact.css">
+    <title>Предложи свой рецепт - полторарецепта.ру</title>
+</head>
+
+<body>
+    <header>
+        <h1>полторарецепта.ру</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="recipes.html">Рецепты</a></li>
+                <li><a href="submit_recipe.html">Предложи свой рецепт</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="recipe-form">
+            <h2 class="pad">Предложи свой рецепт</h2>
+            <form action="https://httpbin.org/post" method="POST" enctype="multipart/form-data" class="form-container">
+                <div class="form-group">
+                    <label for="recipeName">Название рецепта:</label>
+                    <input type="text" id="recipeName" name="recipeName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="ingredients">Ингредиенты:</label>
+                    <textarea id="ingredients" name="ingredients" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="instructions">Инструкции:</label>
+                    <textarea id="instructions" name="instructions" required></textarea>
+                </div>
+
+                <button type="submit">Отправить рецепт</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 полторарецепта.ру. Все права защищены.</p>
+    </footer>
+</body>
+
+</html>
